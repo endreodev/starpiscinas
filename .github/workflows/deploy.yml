@@ -1,0 +1,58 @@
+name: Deploy to FTP
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  web-deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v3
+
+    - name: 🔑 Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.0'
+
+    - name: 📦 Install Composer Dependencies
+      run: composer install --no-dev --optimize-autoloader
+
+    - name: 🔑 Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '22'
+
+    - name: 📦 Install NPM Dependencies & Build
+      run: |
+        npm install
+        npm run build
+
+    - name: 📂 Sync files via FTP
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: 62.72.62.32
+        username: ${{ secrets.FTP_USER }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        server-dir: public_html/
+        exclude: |
+          **/.git*
+          **/.git*/**
+          **/node_modules/**
+          **/tests/**
+          **/storage/framework/cache/**
+          **/storage/framework/sessions/**
+          **/storage/framework/views/**
+          .env
+          tmp_laravel
+          instrucoes.md
+          imagens
+          README.md
+          composer.lock
+          package-lock.json
+          phpunit.xml
+          webpack.mix.js
