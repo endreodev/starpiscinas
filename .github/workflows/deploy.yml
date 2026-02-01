@@ -38,7 +38,7 @@ jobs:
         server: 62.72.62.32
         username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PASSWORD }}
-        server-dir: public_html/
+        server-dir: /
         exclude: |
           **/.git*
           **/.git*/**
@@ -48,11 +48,18 @@ jobs:
           **/storage/framework/sessions/**
           **/storage/framework/views/**
           .env
-          tmp_laravel
+          tmp_laravel/**
           instrucoes.md
-          imagens
+          imagens/**
           README.md
           composer.lock
           package-lock.json
           phpunit.xml
           webpack.mix.js
+          vite.config.js
+          package.json
+          package-lock.json
+          .editorconfig
+          .styleci.yml
+          .gitattributes
+          .gitignore
