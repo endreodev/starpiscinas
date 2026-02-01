@@ -40,6 +40,7 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         server-dir: /
         exclude: |
+          **/vendor/**
           **/.git*
           **/.git*/**
           **/node_modules/**
@@ -63,3 +64,4 @@ jobs:
           .styleci.yml
           .gitattributes
           .gitignore
+        state-name: .ftp-deploy-sync-state.json
