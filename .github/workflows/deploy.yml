@@ -33,6 +33,17 @@ jobs:
         npm install
         npm run build
 
+    - name: 📦 Create Deployment Zip
+      run: |
+        sudo apt-get update && sudo apt-get install -y zip
+        zip -r deploy.zip . -x ".git/*" "node_modules/*" ".agent/*" "tests/*" "Dockerfile" "docker-compose.yml" "README.md" "instrucoes.md" "phpunit.xml" "vite.config.js" "package.json" "package-lock.json" "composer.json" "composer.lock" ".editorconfig" ".styleci.yml" ".gitattributes" ".gitignore" ".ftp-deploy-sync-state.json"
+
+    - name: 📂 Prepare Dist Folder
+      run: |
+        mkdir dist
+        mv deploy.zip dist/
+        cp extract.php dist/
+
     - name: 📂 Sync files via FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
@@ -40,29 +51,5 @@ jobs:
         username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PASSWORD }}
         server-dir: /
-        exclude: |
-          **/.agent/**
-          **/.git*
-          **/.git*/**
-          **/node_modules/**
-          **/tests/**
-          **/storage/framework/cache/**
-          **/storage/framework/sessions/**
-          **/storage/framework/views/**
-          .env
-          tmp_laravel/**
-          instrucoes.md
-          imagens/**
-          README.md
-          composer.lock
-          package-lock.json
-          phpunit.xml
-          webpack.mix.js
-          vite.config.js
-          package.json
-          package-lock.json
-          .editorconfig
-          .styleci.yml
-          .gitattributes
-          .gitignore
-        state-name: .ftp-deploy-sync-state.json
+        local-dir: ./dist/
+        state-name: .ftp-deploy-sync-state-zip.json
