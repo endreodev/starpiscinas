@@ -50,6 +50,6 @@ jobs:
         server: 62.72.62.32
         username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PASSWORD }}
-        server-dir: /
+        server-dir: public_html/
         local-dir: ./dist/
         state-name: .ftp-deploy-sync-state-zip.json
