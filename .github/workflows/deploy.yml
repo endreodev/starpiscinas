@@ -43,6 +43,7 @@ jobs:
         mkdir dist
         mv deploy.zip dist/
         cp extract.php dist/
+        cp check.php dist/
 
     - name: 📂 Sync files via FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
