@@ -41,7 +41,6 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         server-dir: /
         exclude: |
-          **/vendor/**
           **/.agent/**
           **/.git*
           **/.git*/**
