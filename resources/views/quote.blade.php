@@ -112,3 +112,16 @@
         </div>
     </section>
 @endsection
+
+@if(session('whatsapp_url'))
+    @push('scripts')
+        <script>
+            window.onload = function () {
+                // Pequeno delay para o usuário ver a mensagem de sucesso
+                setTimeout(function () {
+                    window.open("{{ session('whatsapp_url') }}", "_blank");
+                }, 1000);
+            };
+        </script>
+    @endpush
+@endif

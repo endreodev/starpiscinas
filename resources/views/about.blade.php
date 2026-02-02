@@ -35,9 +35,64 @@
                     </div>
                 </div>
                 <div class="flex-1 relative">
-                    <img src="https://images.unsplash.com/photo-1572331165267-85462a40c293?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                        alt="Nossa equipe" class="rounded-[2rem] shadow-2xl relative z-10 w-full h-[600px] object-cover">
+                    <img src="{{ asset('images/team.png') }}" alt="Nossa equipe"
+                        class="rounded-[2rem] shadow-2xl relative z-10 w-full h-[600px] object-cover">
                     <div class="absolute -bottom-10 -right-10 w-64 h-64 bg-brand-blue/10 rounded-full z-0 blur-3xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Water Safety Parameters Section -->
+    <section class="py-24 overflow-hidden bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="flex-1 order-2 lg:order-1">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="bg-blue-50 p-8 rounded-3xl border border-blue-100">
+                            <h4 class="text-brand-blue font-bold mb-3 italic">Controle de pH</h4>
+                            <p class="text-sm text-gray-600 leading-relaxed">Mantemos rigorosamente entre 7.2 e 7.6. Isso
+                                garante o conforto dos olhos e pele, além de maximizar a eficiência do cloro.</p>
+                        </div>
+                        <div class="bg-blue-50 p-8 rounded-3xl border border-blue-100">
+                            <h4 class="text-brand-blue font-bold mb-3 italic">Alcalinidade Total</h4>
+                            <p class="text-sm text-gray-600 leading-relaxed">Monitoramos para manter entre 80 e 120 ppm,
+                                evitando variações bruscas de pH e protegendo os equipamentos.</p>
+                        </div>
+                        <div class="bg-blue-50 p-8 rounded-3xl border border-blue-100">
+                            <h4 class="text-brand-blue font-bold mb-3 italic">Desinfecção (Cloro)</h4>
+                            <p class="text-sm text-gray-600 leading-relaxed">Níveis de Cloro Livre entre 1 e 3 ppm garantem
+                                a eliminação de 99.9% de germes e bactérias nocivas.</p>
+                        </div>
+                        <div class="bg-blue-50 p-8 rounded-3xl border border-blue-100">
+                            <h4 class="text-brand-blue font-bold mb-3 italic">Equilíbrio Químico</h4>
+                            <p class="text-sm text-gray-600 leading-relaxed">Análise técnica periódica de dureza cálcica e
+                                ácido cianúrico para uma água cristalina e saudável.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-1 order-1 lg:order-2">
+                    <span class="text-brand-blue font-bold tracking-widest uppercase text-sm mb-6 block">Saúde em Primeiro
+                        Lugar</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-8 italic">Ciência Aplicada ao seu <span
+                            class="text-brand-blue">Bem-Estar</span>.</h2>
+                    <p class="text-gray-600 text-lg mb-6 leading-relaxed">
+                        Para a Star Piscinas, limpeza vai muito além da estética. Nosso foco central é a **saúde biológica**
+                        da água. Uma piscina mal tratada pode ser transmissora de doenças e irritações.
+                    </p>
+                    <p class="text-gray-600 text-lg mb-8 leading-relaxed">
+                        Utilizamos equipamentos de medição de precisão para controlar cada parâmetro químico. Nosso processo
+                        garante que a água não seja apenas "azul", mas **perfeitamente segura e habitável** para seres
+                        humanos de todas as idades.
+                    </p>
+                    <div class="flex items-center gap-4 text-brand-blue font-bold">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        Água 100% Habitável e Segura
+                    </div>
                 </div>
             </div>
         </div>

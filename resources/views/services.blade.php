@@ -66,8 +66,8 @@
                             Orçamento</a>
                     </div>
                     <div class="flex-1">
-                        <img src="https://images.unsplash.com/photo-1579848520847-f49553f195d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Limpeza residencial" class="rounded-3xl shadow-2xl">
+                        <img src="{{ asset('images/residential.png') }}" alt="Limpeza residencial"
+                            class="rounded-3xl shadow-2xl w-full h-[400px] object-cover">
                     </div>
                 </div>
 
@@ -112,8 +112,8 @@
                             Orçamento</a>
                     </div>
                     <div class="flex-1">
-                        <img src="https://images.unsplash.com/photo-1558231015-46543b355280?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Piscina comercial" class="rounded-3xl shadow-2xl">
+                        <img src="{{ asset('images/commercial.png') }}" alt="Piscina comercial"
+                            class="rounded-3xl shadow-2xl w-full h-[400px] object-cover">
                     </div>
                 </div>
 
@@ -134,8 +134,8 @@
                             Orçamento</a>
                     </div>
                     <div class="flex-1">
-                        <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                            alt="Tratamento químico" class="rounded-3xl shadow-2xl">
+                        <img src="{{ asset('images/chemical.png') }}" alt="Tratamento químico"
+                            class="rounded-3xl shadow-2xl w-full h-[400px] object-cover">
                     </div>
                 </div>
             </div>

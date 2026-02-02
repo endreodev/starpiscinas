@@ -28,7 +28,7 @@
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
                     <a href="{{ route('quote') }}"
-                        class="bg-brand-blue hover:bg-brand-blue/90 text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-xl shadow-brand-blue/30 text-center">
+                        class="bg-brand-blue hover:bg-brand-blue/90 text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-xl shadow-brand-blue/30 text-center animate-attention">
                         Solicitar Orçamento
                     </a>
                     <a href="{{ route('services') }}"
@@ -127,8 +127,7 @@
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center gap-16">
                 <div class="flex-1 relative">
-                    <img src="https://images.unsplash.com/photo-1579848520847-f49553f195d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                        alt="Manutenção de piscina"
+                    <img src="{{ asset('images/maintenance.png') }}" alt="Manutenção de piscina"
                         class="rounded-3xl shadow-2xl relative z-10 w-full h-[500px] object-cover">
                     <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-brand-turquesa rounded-2xl z-0"></div>
                     <div class="absolute -top-6 -right-6 w-32 h-32 border-4 border-brand-blue rounded-2xl z-0"></div>
@@ -306,11 +305,11 @@
                 um mergulho seguro e cristalino.</p>
             <div class="flex flex-col sm:flex-row gap-6 justify-center">
                 <a href="https://wa.me/5565981719837" target="_blank"
-                    class="bg-[#25D366] hover:bg-[#20bd5a] text-white px-10 py-4 rounded-full font-bold text-lg transition-all flex items-center justify-center gap-2">
+                    class="bg-[#25D366] hover:bg-[#20bd5a] text-white px-10 py-4 rounded-full font-bold text-lg transition-all flex items-center justify-center gap-2 animate-attention">
                     Falar no WhatsApp
                 </a>
                 <a href="{{ route('quote') }}"
-                    class="bg-brand-blue hover:bg-brand-blue/90 text-white px-10 py-4 rounded-full font-bold text-lg transition-all text-center">
+                    class="bg-brand-blue hover:bg-brand-blue/90 text-white px-10 py-4 rounded-full font-bold text-lg transition-all text-center animate-attention">
                     Solicitar Orçamento
                 </a>
             </div>
