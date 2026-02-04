@@ -8,9 +8,9 @@ echo "<h1>Diagnóstico de Ambiente - Star Piscinas</h1>";
 // 1. Versão do PHP
 echo "<h2>1. Versão do PHP</h2>";
 echo "Versão Atual: " . PHP_VERSION . "<br>";
-echo "Requerido: PHP 8.4 ou superior<br>";
-if (version_compare(PHP_VERSION, '8.4.0', '<')) {
-    echo "<span style='color:red;'>[ERRO] Sua versão do PHP é inferior à requerida pelo projeto (8.4).</span>";
+echo "Requerido: PHP 8.2 ou superior<br>";
+if (version_compare(PHP_VERSION, '8.2.0', '<')) {
+    echo "<span style='color:red;'>[ERRO] Sua versão do PHP é inferior à requerida pelo projeto (8.2).</span>";
 } else {
     echo "<span style='color:green;'>[OK] Versão do PHP compatível.</span>";
 }

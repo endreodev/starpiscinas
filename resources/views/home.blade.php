@@ -206,7 +206,7 @@
                         piscina nunca esteve tão azul e saudável!"</p>
                     <div class="flex items-center gap-4">
                         <div class="w-12 h-12 bg-gray-200 rounded-full overflow-hidden">
-                            <img src="https://i.pravatar.cc/150?u=1" alt="Avatar">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Avatar">
                         </div>
                         <div>
                             <h5 class="font-bold">Ricardo S.</h5>
@@ -243,7 +243,7 @@
                         crônico no meu filtro que ninguém conseguia."</p>
                     <div class="flex items-center gap-4">
                         <div class="w-12 h-12 bg-gray-200 rounded-full overflow-hidden">
-                            <img src="https://i.pravatar.cc/150?u=2" alt="Avatar">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Avatar">
                         </div>
                         <div>
                             <h5 class="font-bold">Márcia F.</h5>
@@ -280,7 +280,7 @@
                         condomínio e a economia com produtos foi notória."</p>
                     <div class="flex items-center gap-4">
                         <div class="w-12 h-12 bg-gray-200 rounded-full overflow-hidden">
-                            <img src="https://i.pravatar.cc/150?u=3" alt="Avatar">
+                            <img src="https://randomuser.me/api/portraits/men/85.jpg" alt="Avatar">
                         </div>
                         <div>
                             <h5 class="font-bold">João P.</h5>
