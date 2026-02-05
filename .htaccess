@@ -16,5 +16,7 @@
 
     # Send Requests To Public Directory
     RewriteCond %{REQUEST_URI} !^/public/
+    RewriteCond %{REQUEST_URI} !^/extract.php$
+    RewriteCond %{REQUEST_URI} !^/clear_cache.php$
     RewriteRule ^(.*)$ public/$1 [L]
 </IfModule>
