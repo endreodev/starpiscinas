@@ -45,6 +45,7 @@ jobs:
         cp extract.php dist/
         cp check.php dist/
         cp clear_cache.php dist/
+        cp generate_key_prod.php dist/
 
     - name: 📂 Sync files via FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
@@ -55,3 +56,15 @@ jobs:
         server-dir: ./
         local-dir: ./dist/
         state-name: .ftp-deploy-sync-state-zip.json
+
+    - name: 🚀 Execute Remote Setup Scripts
+      run: |
+        echo "⏳ Triggering Extract..."
+        curl -L --fail "https://starpiscinas.com.br/extract.php" || echo "Extract failed or file not found (maybe already extracted?)"
+        
+        echo "⏳ Generating APP_KEY..."
+        curl -L --fail "https://starpiscinas.com.br/generate_key_prod.php" || echo "Key generation failed"
+
+        echo "⏳ Clearing Cache..."
+        curl -L --fail "https://starpiscinas.com.br/clear_cache.php" || echo "Cache clear failed"
+
