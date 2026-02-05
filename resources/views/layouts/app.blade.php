@@ -5,13 +5,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Star Piscinas - Limpeza e Tratamento')</title>
-    <meta name="description"
-        content="Especialista em limpeza e tratamento de piscinas em Cuiabá e Várzea Grande. Qualidade e confiança para sua piscina.">
+    <meta name="description" content="@yield('description', 'Especialista em limpeza e tratamento de piscinas em Cuiabá e Várzea Grande. Qualidade e confiança para sua piscina.')">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="{{ url()->current() }}" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ url()->current() }}" />
+    <meta property="og:title" content="@yield('title', 'Star Piscinas - Limpeza e Tratamento')" />
+    <meta property="og:description" content="@yield('description', 'Especialista em limpeza e tratamento de piscinas em Cuiabá e Várzea Grande. Qualidade e confiança para sua piscina.')" />
+    <meta property="og:image" content="{{ asset('images/social-share.jpg') }}" />
+    <meta property="og:site_name" content="Star Piscinas" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="{{ url()->current() }}" />
+    <meta property="twitter:title" content="@yield('title', 'Star Piscinas - Limpeza e Tratamento')" />
+    <meta property="twitter:description" content="@yield('description', 'Especialista em limpeza e tratamento de piscinas em Cuiabá e Várzea Grande. Qualidade e confiança para sua piscina.')" />
+    <meta property="twitter:image" content="{{ asset('images/social-share.jpg') }}" />
+
+    <!-- Schema.org Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Star Piscinas",
+      "image": "{{ asset('images/logo.png') }}",
+      "telephone": "5565981719837",
+      "email": "contato@starpiscinas.com.br",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Cuiabá",
+        "addressRegion": "MT",
+        "addressCountry": "BR"
+      },
+      "url": "{{ route('home') }}",
+      "priceRange": "$$",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "08:00",
+        "closes": "18:00"
+      }
+    }
+    </script>
     @vite(['resources/css/app.css'])
 </head>
 

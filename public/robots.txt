@@ -1,2 +1,5 @@
 User-agent: *
-Disallow:
+Allow: /
+Disallow: /admin
+
+Sitemap: https://starpiscinas.com.br/sitemap.xml
