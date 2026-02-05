@@ -44,6 +44,7 @@ jobs:
         mv deploy.zip dist/
         cp extract.php dist/
         cp check.php dist/
+        cp clear_cache.php dist/
 
     - name: 📂 Sync files via FTP
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
@@ -51,6 +52,6 @@ jobs:
         server: 62.72.62.32
         username: ${{ secrets.FTP_USER }}
         password: ${{ secrets.FTP_PASSWORD }}
-        server-dir: public_html/
+        server-dir: ./
         local-dir: ./dist/
         state-name: .ftp-deploy-sync-state-zip.json
