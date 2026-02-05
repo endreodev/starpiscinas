@@ -121,7 +121,7 @@ class PageController extends Controller
                 'title' => 'Como manter o pH da água equilibrado no verão de Cuiabá?',
                 'category' => 'Cuidados',
                 'date' => '31 de Janeiro, 2026',
-                'image' => 'images/tip1.png',
+                'image' => 'images/tip1.webp',
                 'content' => '<p>O verão em Cuiabá é conhecido por suas temperaturas extremas, muitas vezes ultrapassando os 40°C. Para quem tem piscina, esse calor intenso traz um desafio adicional: a evaporação rápida e o desequilíbrio químico acelerado.</p>
                              <p>Quando a temperatura da água sobe, o consumo de cloro aumenta drasticamente, e o pH tende a variar com mais frequência. Se o pH estiver fora da faixa ideal (7.2 a 7.6), o cloro perde sua eficácia, permitindo que a água fique verde em poucas horas.</p>
                              <h3>Dicas Práticas:</h3>
@@ -135,7 +135,7 @@ class PageController extends Controller
                 'title' => 'A importância da manutenção preventiva no sistema de filtragem',
                 'category' => 'Segurança',
                 'date' => '15 de Janeiro, 2026',
-                'image' => 'images/tip2.png',
+                'image' => 'images/tip2.webp',
                 'content' => '<p>O sistema de filtragem é o "coração" da sua piscina. Sem uma filtragem eficiente, nenhum produto químico fará milagres. A manutenção preventiva deste sistema é essencial para economizar dinheiro e garantir água cristalina.</p>
                              <p>A areia do filtro tem uma vida útil. Com o tempo, os grãos de areia ficam arredondados e perdem a capacidade de reter as impurezas mais finas, resultando em uma água que parece sempre "opaca" ou "turva".</p>
                              <h3>Quando trocar a areia?</h3>
@@ -145,7 +145,7 @@ class PageController extends Controller
                 'title' => 'Novos sistemas de automação para controle de cloro',
                 'category' => 'Inovação',
                 'date' => '01 de Janeiro, 2026',
-                'image' => 'images/tip3.png',
+                'image' => 'images/tip3.webp',
                 'content' => '<p>A tecnologia iPool e os geradores de cloro por sal transformaram a rotina de quem possui piscina. A automação não é mais um luxo, mas uma forma inteligente de gerenciar recursos e garantir segurança total.</p>
                              <p>Sistemas automatizados medem em tempo real a necessidade de desinfecção e dosam o produto exato. Isso evita o excesso de produtos químicos, que pode causar irritações na pele e olhos, e também evita a falta, que compromete a saúde dos usuários.</p>
                              <p>Imagine controlar a cascata, a iluminação LED e o nível de cloro diretamente pelo seu smartphone. É o futuro da manutenção chegando à sua casa.</p>'

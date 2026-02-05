@@ -66,7 +66,7 @@
                             Orçamento</a>
                     </div>
                     <div class="flex-1">
-                        <img src="{{ asset('images/residential.png') }}" alt="Limpeza residencial"
+                        <img src="{{ asset('images/residential.webp') }}" alt="Limpeza residencial"
                             class="rounded-3xl shadow-2xl w-full h-[400px] object-cover">
                     </div>
                 </div>
@@ -112,7 +112,7 @@
                             Orçamento</a>
                     </div>
                     <div class="flex-1">
-                        <img src="{{ asset('images/commercial.png') }}" alt="Piscina comercial"
+                        <img src="{{ asset('images/commercial.webp') }}" alt="Piscina comercial"
                             class="rounded-3xl shadow-2xl w-full h-[400px] object-cover">
                     </div>
                 </div>
@@ -134,7 +134,7 @@
                             Orçamento</a>
                     </div>
                     <div class="flex-1">
-                        <img src="{{ asset('images/chemical.png') }}" alt="Tratamento químico"
+                        <img src="{{ asset('images/chemical.webp') }}" alt="Tratamento químico"
                             class="rounded-3xl shadow-2xl w-full h-[400px] object-cover">
                     </div>
                 </div>

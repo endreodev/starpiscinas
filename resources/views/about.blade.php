@@ -35,7 +35,7 @@
                     </div>
                 </div>
                 <div class="flex-1 relative">
-                    <img src="{{ asset('images/team.png') }}" alt="Nossa equipe"
+                    <img src="{{ asset('images/team.webp') }}" alt="Nossa equipe"
                         class="rounded-[2rem] shadow-2xl relative z-10 w-full h-[600px] object-cover">
                     <div class="absolute -bottom-10 -right-10 w-64 h-64 bg-brand-blue/10 rounded-full z-0 blur-3xl"></div>
                 </div>

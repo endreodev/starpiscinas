@@ -43,7 +43,7 @@
                 <!-- Blog 2 -->
                 <article class="bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl transition-all group">
                     <div class="h-64 overflow-hidden relative">
-                        <img src="{{ asset('images/tip2.png') }}" alt="Dica 2"
+                        <img src="{{ asset('images/tip2.webp') }}" alt="Dica 2"
                             class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                         <span
                             class="absolute top-6 left-6 bg-brand-blue text-white px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest">Segurança</span>

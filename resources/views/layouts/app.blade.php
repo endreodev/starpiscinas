@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Star Piscinas - Limpeza e Tratamento')</title>
-    <meta name="description" content="@yield('description', 'Especialista em limpeza e tratamento de piscinas em Cuiabá e Várzea Grande. Qualidade e confiança para sua piscina.')">
+    <meta name="description"
+        content="@yield('description', 'Especialista em limpeza e tratamento de piscinas em Cuiabá e Várzea Grande. Qualidade e confiança para sua piscina.')">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,7 +20,8 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{{ url()->current() }}" />
     <meta property="og:title" content="@yield('title', 'Star Piscinas - Limpeza e Tratamento')" />
-    <meta property="og:description" content="@yield('description', 'Especialista em limpeza e tratamento de piscinas em Cuiabá e Várzea Grande. Qualidade e confiança para sua piscina.')" />
+    <meta property="og:description"
+        content="@yield('description', 'Especialista em limpeza e tratamento de piscinas em Cuiabá e Várzea Grande. Qualidade e confiança para sua piscina.')" />
     <meta property="og:image" content="{{ asset('images/social-share.jpg') }}" />
     <meta property="og:site_name" content="Star Piscinas" />
 
@@ -27,7 +29,8 @@
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="{{ url()->current() }}" />
     <meta property="twitter:title" content="@yield('title', 'Star Piscinas - Limpeza e Tratamento')" />
-    <meta property="twitter:description" content="@yield('description', 'Especialista em limpeza e tratamento de piscinas em Cuiabá e Várzea Grande. Qualidade e confiança para sua piscina.')" />
+    <meta property="twitter:description"
+        content="@yield('description', 'Especialista em limpeza e tratamento de piscinas em Cuiabá e Várzea Grande. Qualidade e confiança para sua piscina.')" />
     <meta property="twitter:image" content="{{ asset('images/social-share.jpg') }}" />
 
     <!-- Schema.org Markup -->
@@ -36,7 +39,7 @@
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Star Piscinas",
-      "image": "{{ asset('images/logo.png') }}",
+      "image": "{{ asset('images/logo.webp') }}",
       "telephone": "5565981719837",
       "email": "contato@starpiscinas.com.br",
       "address": {
@@ -72,7 +75,7 @@
         <div class="container mx-auto px-4 h-20 md:h-32 flex items-center justify-between">
             <!-- Logo -->
             <a href="{{ route('home') }}" class="flex items-center gap-2">
-                <img src="{{ asset('images/logo-lateral.png') }}" alt="Star Piscinas Logo" class="h-16 md:h-32">
+                <img src="{{ asset('images/logo-lateral.webp') }}" alt="Star Piscinas Logo" class="h-16 md:h-32">
                 <!-- <span class="text-xl font-bold text-brand-blue hidden sm:inline">Star Piscinas</span> -->
             </a>
 
@@ -128,7 +131,7 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
                 <div>
                     <div class="flex items-center gap-2 mb-6">
-                        <img src="{{ asset('images/logo.png') }}" alt="Star Piscinas Logo" class="h-10 w-auto">
+                        <img src="{{ asset('images/logo.webp') }}" alt="Star Piscinas Logo" class="h-10 w-auto">
                         <span class="text-xl font-bold">Star Piscinas</span>
                     </div>
                     <p class="text-gray-400 text-sm leading-relaxed">

@@ -127,7 +127,7 @@
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center gap-16">
                 <div class="flex-1 relative">
-                    <img src="{{ asset('images/maintenance.png') }}" alt="Manutenção de piscina"
+                    <img src="{{ asset('images/maintenance.webp') }}" alt="Manutenção de piscina"
                         class="rounded-3xl shadow-2xl relative z-10 w-full h-[500px] object-cover">
                     <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-brand-turquesa rounded-2xl z-0"></div>
                     <div class="absolute -top-6 -right-6 w-32 h-32 border-4 border-brand-blue rounded-2xl z-0"></div>
