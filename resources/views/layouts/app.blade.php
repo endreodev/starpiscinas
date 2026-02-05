@@ -12,21 +12,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        [x-cloak] {
-            display: none !important;
-        }
-    </style>
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="{{ asset('images/logo-sem-fundo.png') }}">
-
     @vite(['resources/css/app.css'])
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js"></script>
 </head>
 
-<body class="font-inter bg-white text-gray-900 antialiased flex flex-col min-h-screen"
-    x-data="{ mobileMenuOpen: false }">
+<body class="font-inter bg-white text-gray-900 antialiased flex flex-col min-h-screen">
 
     <!-- Header -->
     <header class="sticky top-0 z-50 bg-transparent backdrop-blur-sm shadow-lg">
@@ -50,29 +39,29 @@
             </nav>
 
             <!-- Mobile Toggle -->
-            <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden text-gray-600 focus:outline-none">
-                <svg x-show="!mobileMenuOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+            <!-- Mobile Toggle -->
+            <button id="mobile-menu-btn" class="md:hidden text-gray-600 focus:outline-none">
+                <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
                     viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
                 </svg>
-                <svg x-show="mobileMenuOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-                    viewBox="0 0 24 24" stroke="currentColor" style="display: none;">
+                <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 hidden" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
             </button>
         </div>
 
         <!-- Mobile Nav -->
-        <div x-cloak x-show="mobileMenuOpen" x-transition:enter="transition ease-out duration-200"
-            x-transition:enter-start="opacity-0 -translate-y-4" x-transition:enter-end="opacity-100 translate-y-0"
-            @click.away="mobileMenuOpen = false" style="display: none;"
-            class="absolute top-full left-0 w-full bg-white border-b border-gray-100 px-4 py-8 flex flex-col gap-6 text-center shadow-2xl md:hidden h-[calc(100vh-5rem)] overflow-y-auto pb-40">
-            <a href="{{ route('home') }}" @click="mobileMenuOpen = false" class="text-lg font-medium">Início</a>
-            <a href="{{ route('about') }}" @click="mobileMenuOpen = false" class="text-lg font-medium">Sobre</a>
-            <a href="{{ route('services') }}" @click="mobileMenuOpen = false" class="text-lg font-medium">Serviços</a>
-            <a href="{{ route('blog') }}" @click="mobileMenuOpen = false" class="text-lg font-medium">Dicas</a>
-            <a href="{{ route('contact') }}" @click="mobileMenuOpen = false" class="text-lg font-medium">Contato</a>
-            <a href="{{ route('quote') }}" @click="mobileMenuOpen = false"
+        <!-- Mobile Nav -->
+        <div id="mobile-menu"
+            class="hidden absolute top-full left-0 w-full bg-white border-b border-gray-100 px-4 py-8 flex flex-col gap-6 text-center shadow-2xl md:hidden h-[calc(100vh-5rem)] overflow-y-auto pb-40">
+            <a href="{{ route('home') }}" class="text-lg font-medium">Início</a>
+            <a href="{{ route('about') }}" class="text-lg font-medium">Sobre</a>
+            <a href="{{ route('services') }}" class="text-lg font-medium">Serviços</a>
+            <a href="{{ route('blog') }}" class="text-lg font-medium">Dicas</a>
+            <a href="{{ route('contact') }}" class="text-lg font-medium">Contato</a>
+            <a href="{{ route('quote') }}"
                 class="bg-brand-blue text-white px-5 py-3 rounded-lg font-bold animate-attention">Solicitar
                 Orçamento</a>
         </div>
@@ -147,6 +136,47 @@
         </svg>
     </a>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const openIcon = document.getElementById('menu-icon-open');
+            const closeIcon = document.getElementById('menu-icon-close');
+
+            if (!btn || !menu) return;
+
+            function toggleMenu() {
+                menu.classList.toggle('hidden');
+                openIcon.classList.toggle('hidden');
+                closeIcon.classList.toggle('hidden');
+            }
+
+            function closeMenu() {
+                if (!menu.classList.contains('hidden')) {
+                    menu.classList.add('hidden');
+                    openIcon.classList.remove('hidden');
+                    closeIcon.classList.add('hidden');
+                }
+            }
+
+            btn.addEventListener('click', function (e) {
+                e.stopPropagation();
+                toggleMenu();
+            });
+
+            // Fechar ao clicar fora
+            document.addEventListener('click', function (event) {
+                if (!menu.contains(event.target) && !btn.contains(event.target)) {
+                    closeMenu();
+                }
+            });
+
+            // Fechar ao clicar em link
+            menu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', closeMenu);
+            });
+        });
+    </script>
 </body>
 
 </html>
