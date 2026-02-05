@@ -24,10 +24,10 @@
 
     <!-- Header -->
     <header class="sticky top-0 z-50 bg-transparent backdrop-blur-sm shadow-lg">
-        <div class="container mx-auto px-4 h-32 flex items-center justify-between">
+        <div class="container mx-auto px-4 h-20 md:h-32 flex items-center justify-between">
             <!-- Logo -->
             <a href="{{ route('home') }}" class="flex items-center gap-2">
-                <img src="{{ asset('images/logo-lateral.png') }}" alt="Star Piscinas Logo" style="height: 8rem;">
+                <img src="{{ asset('images/logo-lateral.png') }}" alt="Star Piscinas Logo" class="h-16 md:h-32">
                 <!-- <span class="text-xl font-bold text-brand-blue hidden sm:inline">Star Piscinas</span> -->
             </a>
 
@@ -59,7 +59,8 @@
         <!-- Mobile Nav -->
         <div x-show="mobileMenuOpen" x-transition:enter="transition ease-out duration-200"
             x-transition:enter-start="opacity-0 -translate-y-4" x-transition:enter-end="opacity-100 translate-y-0"
-            class="md:hidden bg-white border-b border-gray-100 px-4 py-6 flex flex-col gap-4 text-center">
+            @click.away="mobileMenuOpen = false"
+            class="absolute top-full left-0 w-full bg-white border-b border-gray-100 px-4 py-8 flex flex-col gap-6 text-center shadow-2xl md:hidden h-screen overflow-y-auto pb-40">
             <a href="{{ route('home') }}" @click="mobileMenuOpen = false" class="text-lg font-medium">Início</a>
             <a href="{{ route('about') }}" @click="mobileMenuOpen = false" class="text-lg font-medium">Sobre</a>
             <a href="{{ route('services') }}" @click="mobileMenuOpen = false" class="text-lg font-medium">Serviços</a>

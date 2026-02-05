@@ -61,10 +61,5 @@ jobs:
       run: |
         echo "⏳ Triggering Extract..."
         curl -L --fail "https://starpiscinas.com.br/extract.php" || echo "Extract failed or file not found (maybe already extracted?)"
-        
-        echo "⏳ Generating APP_KEY..."
-        curl -L --fail "https://starpiscinas.com.br/generate_key_prod.php" || echo "Key generation failed"
-
-        echo "⏳ Clearing Cache..."
         curl -L --fail "https://starpiscinas.com.br/clear_cache.php" || echo "Cache clear failed"
 

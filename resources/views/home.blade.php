@@ -17,7 +17,7 @@
                     class="inline-block px-4 py-1.5 rounded-full bg-brand-blue/20 backdrop-blur-md text-brand-blue font-bold text-sm tracking-widest uppercase mb-6 animate-fade-in">
                     Líder em Cuiabá e Várzea Grande
                 </span>
-                <h1 class="text-5xl md:text-7xl font-bold leading-tight mb-8">
+                <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold leading-tight mb-6 md:mb-8">
                     Sua Piscina <span
                         class="text-brand-blue text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-brand-turquesa">Sempre
                         Pronta</span> Para o Mergulho.
@@ -28,11 +28,11 @@
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
                     <a href="{{ route('quote') }}"
-                        class="bg-brand-blue hover:bg-brand-blue/90 text-white px-8 py-4 rounded-full font-bold text-lg transition-all shadow-xl shadow-brand-blue/30 text-center animate-attention">
+                        class="bg-brand-blue hover:bg-brand-blue/90 text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-bold text-base md:text-lg transition-all shadow-xl shadow-brand-blue/30 text-center animate-attention">
                         Solicitar Orçamento
                     </a>
                     <a href="{{ route('services') }}"
-                        class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-full font-bold text-lg transition-all text-center">
+                        class="bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/20 px-6 py-3 md:px-8 md:py-4 rounded-full font-bold text-base md:text-lg transition-all text-center">
                         Ver Nossos Serviços
                     </a>
                 </div>
@@ -41,7 +41,7 @@
     </section>
 
     <!-- Services Section -->
-    <section id="servicos" class="py-24 bg-gray-50">
+    <section id="servicos" class="py-12 md:py-24 bg-gray-50">
         <div class="container mx-auto px-4">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold mb-6">Excelência em Cada Detalhe</h2>
@@ -123,7 +123,7 @@
     </section>
 
     <!-- Why Us Section -->
-    <section class="py-24 overflow-hidden">
+    <section class="py-12 md:py-24 overflow-hidden">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center gap-16">
                 <div class="flex-1 relative">
@@ -174,7 +174,7 @@
     </section>
 
     <!-- Testimonials -->
-    <section class="py-24 bg-brand-blue/5">
+    <section class="py-12 md:py-24 bg-brand-blue/5">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-16 italic">O que nossos clientes dizem</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -293,7 +293,7 @@
     </section>
 
     <!-- Final CTA -->
-    <section class="py-24 bg-gray-900 overflow-hidden relative">
+    <section class="py-12 md:py-24 bg-gray-900 overflow-hidden relative">
         <div class="absolute inset-0 z-0 opacity-20">
             <img src="https://images.unsplash.com/photo-1558231015-46543b355280?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80"
                 alt="Piscina noturna" class="w-full h-full object-cover">
